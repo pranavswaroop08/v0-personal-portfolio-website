@@ -1,9 +1,29 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowDown, FileText, FlaskConical, FolderOpen } from "lucide-react"
+import { ArrowDown, Download, FlaskConical, FolderOpen, Briefcase, Bot, Dribbble } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 import Link from "next/link"
+
+const currentlyBuilding = [
+  {
+    icon: FlaskConical,
+    text: "Researching proactive phishing detection using Certificate Transparency logs and heterogeneous AI fusion",
+  },
+  {
+    icon: Bot,
+    text: "Building intelligent automation and trend intelligence systems",
+  },
+  {
+    icon: Dribbble,
+    text: "Representing the PES University Basketball Team",
+  },
+  {
+    icon: Briefcase,
+    text: "Exploring opportunities in AI, cybersecurity, and software engineering",
+  },
+]
 
 export function HeroSection() {
   return (
@@ -27,8 +47,8 @@ export function HeroSection() {
         }}
       />
 
-      <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 md:px-6 relative z-10 py-20">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -42,8 +62,8 @@ export function HeroSection() {
               transition={{ delay: 0.4 }}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-6"
             >
-              <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-              <span className="text-sm text-muted-foreground">Open to Opportunities</span>
+              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+              <span className="text-sm text-muted-foreground">Building AI, Security & Analytics Systems</span>
             </motion.div>
 
             <motion.h1
@@ -71,17 +91,17 @@ export function HeroSection() {
               transition={{ delay: 0.7 }}
               className="text-muted-foreground leading-relaxed mb-8 max-w-xl"
             >
-              Second-year Computer Science student at PES University building AI-powered systems, 
-              automation workflows, analytics platforms, and cybersecurity solutions. Passionate 
-              about intelligent systems, workflow automation, cybersecurity research, and 
-              data-driven product development.
+              I&apos;m a second-year Computer Science student at PES University building AI-powered 
+              automation systems, analytics platforms, and cybersecurity solutions. My current research 
+              focuses on proactive phishing detection through Certificate Transparency log mining and 
+              heterogeneous AI fusion.
             </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
-              className="flex flex-wrap gap-4"
+              className="flex flex-wrap gap-4 mb-10"
             >
               <Button asChild size="lg" className="glow">
                 <Link href="#projects">
@@ -96,11 +116,41 @@ export function HeroSection() {
                 </Link>
               </Button>
               <Button asChild variant="ghost" size="lg">
-                <Link href="#contact">
-                  <FileText className="mr-2 h-5 w-5" />
-                  Download Resume
-                </Link>
+                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                  <Download className="mr-2 h-5 w-5" />
+                  Resume
+                </a>
               </Button>
+            </motion.div>
+
+            {/* Currently Building Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.9 }}
+              className="pt-8 border-t border-border/30"
+            >
+              <h3 className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-5">
+                Currently Building
+              </h3>
+              <div className="space-y-4">
+                {currentlyBuilding.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 1 + index * 0.1 }}
+                    className="flex items-start gap-3 group"
+                  >
+                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
+                      <item.icon className="h-4 w-4 text-primary" />
+                    </div>
+                    <p className="text-sm text-muted-foreground leading-relaxed pt-1">
+                      {item.text}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
             </motion.div>
           </motion.div>
 
@@ -116,10 +166,17 @@ export function HeroSection() {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/30 rounded-full blur-3xl scale-110" />
               
               {/* Profile Container */}
-              <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full glass p-2 glow">
-                <div className="w-full h-full rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center overflow-hidden">
-                  {/* Placeholder with initials */}
-                  <span className="text-6xl md:text-7xl lg:text-8xl font-bold text-gradient">PS</span>
+              <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full glass p-2 glow group">
+                <div className="w-full h-full rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center overflow-hidden relative">
+                  <Image
+                    src="/profile.jpg"
+                    alt="Pranav Swaroop"
+                    fill
+                    className="object-cover rounded-full transition-transform duration-500 group-hover:scale-105"
+                    priority
+                  />
+                  {/* Hover Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full" />
                 </div>
               </div>
 
