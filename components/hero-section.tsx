@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import { ArrowDown, Download, FlaskConical, FolderOpen, Briefcase, Bot, Dribbble } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import Image from "next/image"
+import Image from "public/profile.jpg"
 import Link from "next/link"
 
 const currentlyBuilding = [
