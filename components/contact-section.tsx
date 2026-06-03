@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Send, Github, Linkedin, FileText, Mail, Loader2 } from "lucide-react"
+import { Send, Github, Linkedin, FileText, Mail, Loader2, Download } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -71,7 +71,7 @@ export function ContactSection() {
                   <Input
                     id="email"
                     type="email"
-                    placeholder="pranavswaroop1234567890@gmail.com"
+                    placeholder="yourname@example.com"
                     className="bg-secondary/50 border-border/50"
                     required
                   />
@@ -158,7 +158,7 @@ export function ContactSection() {
                   </Link>
 
                   <Link
-                    href="mailto:contact@pranavswaroop.com"
+                    href="mailto:pranavswaroop08@gmail.com"
                     className="flex items-center gap-4 p-4 rounded-xl glass glass-hover group"
                   >
                     <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -166,27 +166,34 @@ export function ContactSection() {
                     </div>
                     <div>
                       <div className="font-medium">Email</div>
-                      <div className="text-sm text-muted-foreground">pranavswaroop1234567890@gmail.com</div>
+                      <div className="text-sm text-muted-foreground">pranavswaroop08@gmail.com</div>
                     </div>
                   </Link>
                 </div>
               </div>
 
-              {/* Resume Download */}
-              <div className="p-6 rounded-xl glass">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                    <FileText className="h-6 w-6 text-primary" />
+              {/* FIXED Resume Download Component Block */}
+              <div className="p-6 rounded-xl glass border border-slate-200/50 dark:border-slate-800/50 relative overflow-hidden group">
+                <div className="flex items-center justify-between gap-4 relative z-10">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center group-hover:scale-105 transition-transform">
+                      <FileText className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <div className="font-medium mb-0.5 text-sm">Download Resume</div>
+                      <div className="text-xs text-muted-foreground">Get a copy of my ATS FAANG-style CV</div>
+                    </div>
                   </div>
-                  <div className="flex-1">
-                    <div className="font-medium mb-1">Download Resume</div>
-                    <div className="text-sm text-muted-foreground">Get a copy of my full CV</div>
-                  </div>
-                  <Button variant="outline" className="shrink-0">
-                    Download
+                  
+                  {/* Fixed Button: Uses asChild to map cleanly onto a forced-download native anchor tag */}
+                  <Button asChild variant="outline" size="sm" className="shrink-0 font-medium h-9 hover:bg-primary hover:text-primary-foreground transition-colors">
+                    <a href="/resume.pdf" download="Pranav_Swaroop_Resume.pdf">
+                      <Download className="h-3.5 w-3.5 mr-1.5" /> Download
+                    </a>
                   </Button>
                 </div>
               </div>
+
             </div>
           </motion.div>
         </div>
