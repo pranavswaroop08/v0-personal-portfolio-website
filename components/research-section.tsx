@@ -37,7 +37,7 @@ const researchGoals = [
 
 const timeline = [
   { status: "complete", label: "Literature Review" },
-  { status: "complete", label: "Threat Intelligence Study" },
+  { status: "in-progress", label: "Threat Intelligence Study" },
   { status: "in-progress", label: "Framework Design" },
   { status: "in-progress", label: "Data Collection" },
   { status: "pending", label: "Model Development" },
@@ -103,7 +103,7 @@ export function ResearchSection() {
           <div className="p-8 md:p-10 rounded-2xl glass glow relative overflow-hidden">
             {/* Gradient Overlay */}
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10" />
-            
+
             <div className="relative z-10">
               {/* Status Badge */}
               <div className="flex items-center gap-3 mb-6">
@@ -134,9 +134,9 @@ export function ResearchSection() {
               {/* Description */}
               <div className="prose prose-invert max-w-none">
                 <p className="text-muted-foreground leading-relaxed">
-                  Developing a proactive phishing detection framework that mines Certificate Transparency 
-                  logs to identify suspicious domain registrations before phishing campaigns become active. 
-                  The system combines certificate intelligence, domain-based indicators, and heterogeneous 
+                  Developing a proactive phishing detection framework that mines Certificate Transparency
+                  logs to identify suspicious domain registrations before phishing campaigns become active.
+                  The system combines certificate intelligence, domain-based indicators, and heterogeneous
                   AI models to improve early-stage threat detection and reduce false positives.
                 </p>
               </div>
@@ -172,8 +172,8 @@ export function ResearchSection() {
           <div className="p-8 rounded-2xl glass">
             <h3 className="text-xl font-semibold mb-4 text-gradient">Research Focus</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Investigating how Certificate Transparency intelligence and heterogeneous AI models can be 
-              combined to identify phishing infrastructure before attacks become active. This research aims 
+              Investigating how Certificate Transparency intelligence and heterogeneous AI models can be
+              combined to identify phishing infrastructure before attacks become active. This research aims
               to shift cybersecurity from reactive to proactive defense strategies.
             </p>
           </div>
@@ -233,13 +233,12 @@ export function ResearchSection() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className={`flex items-center gap-3 p-4 rounded-lg ${
-                    item.status === "complete" 
-                      ? "bg-green-500/10 border border-green-500/20" 
+                  className={`flex items-center gap-3 p-4 rounded-lg ${item.status === "complete"
+                      ? "bg-green-500/10 border border-green-500/20"
                       : item.status === "in-progress"
-                      ? "bg-primary/10 border border-primary/20"
-                      : "bg-secondary/30 border border-border/30"
-                  }`}
+                        ? "bg-primary/10 border border-primary/20"
+                        : "bg-secondary/30 border border-border/30"
+                    }`}
                 >
                   {item.status === "complete" ? (
                     <CheckCircle2 className="h-5 w-5 text-green-500 shrink-0" />
@@ -248,9 +247,8 @@ export function ResearchSection() {
                   ) : (
                     <Clock className="h-5 w-5 text-muted-foreground shrink-0" />
                   )}
-                  <span className={`text-sm font-medium ${
-                    item.status === "pending" ? "text-muted-foreground" : ""
-                  }`}>
+                  <span className={`text-sm font-medium ${item.status === "pending" ? "text-muted-foreground" : ""
+                    }`}>
                     {item.label}
                   </span>
                 </motion.div>
@@ -278,8 +276,8 @@ export function ResearchSection() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
               >
-                <Badge 
-                  variant="secondary" 
+                <Badge
+                  variant="secondary"
                   className="px-4 py-2 text-sm bg-primary/10 hover:bg-primary/20 transition-colors cursor-default"
                 >
                   {tech}
