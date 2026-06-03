@@ -23,7 +23,7 @@ const featuredProjects = [
     technologies: ["Python", "APIs", "Automation", "n8n", "AI Analysis"],
     metrics: ["Automated Monitoring", "Trend Extraction", "Workflow Automation"],
     image: "/projects/reddit-agent.png",
-    github: "https://github.com/pranavswaroop08/reddit-trend-agent",
+    github: "https://github.com/pranavswaroop08/reddit-trend-intelligence-agent",
     gradient: "from-primary/20 to-accent/20",
   },
   {
@@ -32,7 +32,7 @@ const featuredProjects = [
     technologies: ["Python", "Data Analytics", "Financial Analysis", "Market Research"],
     metrics: ["Market Analysis", "Data Processing", "Research Insights"],
     image: "/projects/trading-analysis.png",
-    github: "https://github.com/pranavswaroop08/trading-analysis",
+    github: "https://github.com/pranavswaroop08/Trading-Analysis-Syndicate",
     gradient: "from-primary/20 to-accent/20",
   },
 ]
