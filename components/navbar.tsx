@@ -31,9 +31,8 @@ export function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass py-3" : "py-5"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "glass py-3" : "py-5"
+        }`}
     >
       <nav className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <Link href="#home" className="text-xl font-bold tracking-tight">
@@ -54,7 +53,7 @@ export function Navbar() {
           <Button asChild size="sm" className="glow-sm">
             <Link href="#contact">
               <FileText className="mr-2 h-4 w-4" />
-              Resume
+              <a href="/resume.pdf" download="Pranav_Swaroop_Resume.pdf">Resume</a>
             </Link>
           </Button>
         </div>
