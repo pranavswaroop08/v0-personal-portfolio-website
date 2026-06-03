@@ -120,25 +120,25 @@ export function ProjectsSection() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
                 </div>
-                
+
                 <div className="p-6 relative">
                   <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                     {project.description}
                   </p>
-                  
+
                   {/* Metrics */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.metrics.map((metric) => (
-                      <span 
-                        key={metric} 
+                      <span
+                        key={metric}
                         className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary"
                       >
                         {metric}
                       </span>
                     ))}
                   </div>
-                  
+
                   {/* Technologies */}
                   <div className="flex flex-wrap gap-2 mb-5">
                     {project.technologies.map((tech) => (
