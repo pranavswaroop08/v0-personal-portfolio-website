@@ -38,7 +38,7 @@ export function ContactSection() {
             Get in <span className="text-gradient">Touch</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Interested in collaboration, research opportunities, or just want to connect? 
+            Interested in collaboration, research opportunities, or just want to connect?
             Feel free to reach out.
           </p>
         </motion.div>
@@ -71,7 +71,7 @@ export function ContactSection() {
                   <Input
                     id="email"
                     type="email"
-                    placeholder="your@email.com"
+                    placeholder="pranavswaroop1234567890@gmail.com"
                     className="bg-secondary/50 border-border/50"
                     required
                   />
