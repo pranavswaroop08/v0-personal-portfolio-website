@@ -1,9 +1,9 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Image from "next/image"
 import { ArrowDown, Download, FlaskConical, FolderOpen, Briefcase, Bot, Dribbble } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import Image from "public/profile.jpg"
 import Link from "next/link"
 
 const currentlyBuilding = [
@@ -39,7 +39,7 @@ export function HeroSection() {
       </div>
 
       {/* Grid Pattern Overlay */}
-      <div 
+      <div
         className="absolute inset-0 opacity-[0.02]"
         style={{
           backgroundImage: `linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)`,
@@ -91,9 +91,9 @@ export function HeroSection() {
               transition={{ delay: 0.7 }}
               className="text-muted-foreground leading-relaxed mb-8 max-w-xl"
             >
-              I&apos;m a second-year Computer Science student at PES University building AI-powered 
-              automation systems, analytics platforms, and cybersecurity solutions. My current research 
-              focuses on proactive phishing detection through Certificate Transparency log mining and 
+              I&apos;m a second-year Computer Science student at PES University building AI-powered
+              automation systems, analytics platforms, and cybersecurity solutions. My current research
+              focuses on proactive phishing detection through Certificate Transparency log mining and
               heterogeneous AI fusion.
             </motion.p>
 
@@ -164,19 +164,19 @@ export function HeroSection() {
             <div className="relative">
               {/* Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/30 rounded-full blur-3xl scale-110" />
-              
+
               {/* Profile Container */}
-              <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full glass p-2 glow group">
-                <div className="w-full h-full rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center overflow-hidden relative">
+              <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full glass p-2 glow group ring-2 ring-primary/20">
+                <div className="w-full h-full rounded-full overflow-hidden relative">
                   <Image
                     src="/profile.jpg"
                     alt="Pranav Swaroop"
                     fill
-                    className="object-cover rounded-full transition-transform duration-500 group-hover:scale-105"
                     priority
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full z-20" />
                 </div>
               </div>
 
