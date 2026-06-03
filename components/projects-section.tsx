@@ -42,16 +42,19 @@ const additionalProjects = [
     title: "Fitness Tracker",
     description: "A web-based fitness tracking application that helps users monitor workouts, track progress, and maintain performance metrics.",
     icon: Dumbbell,
+    href:"https://github.com/pranavswaroop08/Fitness-Tracker"
   },
   {
     title: "Chat Room With File Transfer",
     description: "A real-time communication platform supporting messaging and file transfer functionality.",
     icon: MessageSquare,
+    href:"https://github.com/pranavswaroop08/Chat-Room-With-FIle-Transfer"
   },
   {
-    title: "F1 Racing Lines",
+    title: "F1 Racing Lines(🚧 In Progress)",
     description: "A visualization project focused on racing line analysis and motorsport performance optimization.",
     icon: Flag,
+    href:""
   },
 ]
 
