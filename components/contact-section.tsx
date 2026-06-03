@@ -166,7 +166,7 @@ export function ContactSection() {
                     </div>
                     <div>
                       <div className="font-medium">Email</div>
-                      <div className="text-sm text-muted-foreground">Get in touch</div>
+                      <div className="text-sm text-muted-foreground">pranavswaroop1234567890@gmail.com</div>
                     </div>
                   </Link>
                 </div>
