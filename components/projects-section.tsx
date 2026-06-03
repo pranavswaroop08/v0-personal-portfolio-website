@@ -9,7 +9,7 @@ import Link from "next/link"
 
 const featuredProjects = [
   {
-    title: "Pitline",
+    title: "Pitline(🚧 In Development)",
     description: "Built a telemetry-driven analytics platform that helps sim racers compare racing lines, identify performance bottlenecks, and improve lap consistency through data-driven insights.",
     technologies: ["TypeScript", "Analytics", "Sports Technology", "Data Visualization"],
     metrics: ["Telemetry Analysis", "Racing Line Comparison", "Performance Tracking"],
