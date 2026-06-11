@@ -9,6 +9,15 @@ import Link from "next/link"
 
 const featuredProjects = [
   {
+  title: "VenueIQ",
+  description: "Built an AI-powered venue intelligence platform that helps users discover, evaluate, and compare event venues through data-driven insights, recommendations, and analytics.",
+  technologies: ["Next.js", "TypeScript", "AI", "Data Analytics", "Maps API"],
+  metrics: ["Venue Discovery", "Smart Recommendations", "Data Insights"],
+  image: "/venueiq.png",
+  github: "https://github.com/pranavswaroop08/VenueIQ",
+  gradient: "from-primary/20 to-accent/20",
+},
+  {
     title: "Pitline",
     description: "Built a telemetry-driven analytics platform that helps sim racers compare racing lines, identify performance bottlenecks, and improve lap consistency through data-driven insights.",
     technologies: ["TypeScript", "Analytics", "Sports Technology", "Data Visualization"],
@@ -24,15 +33,6 @@ const featuredProjects = [
     metrics: ["Automated Monitoring", "Trend Extraction", "Workflow Automation"],
     image: "/reddit.png",
     github: "https://github.com/pranavswaroop08/reddit-trend-intelligence-agent",
-    gradient: "from-primary/20 to-accent/20",
-  },
-  {
-    title: "Trading Analysis Syndicate",
-    description: "Created a market analytics platform that processes financial data, identifies trends, and supports research-driven investment analysis.",
-    technologies: ["Python", "Data Analytics", "Financial Analysis", "Market Research"],
-    metrics: ["Market Analysis", "Data Processing", "Research Insights"],
-    image: "/trading.png",
-    github: "https://github.com/pranavswaroop08/Trading-Analysis-Syndicate",
     gradient: "from-primary/20 to-accent/20",
   },
 ]
