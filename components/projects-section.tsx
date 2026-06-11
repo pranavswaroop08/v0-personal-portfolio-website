@@ -51,10 +51,10 @@ const additionalProjects = [
     href:"https://github.com/pranavswaroop08/Chat-Room-With-FIle-Transfer"
   },
   {
-    title: "F1 Racing Lines(🚧 In Progress)",
-    description: "A visualization project focused on racing line analysis and motorsport performance optimization.",
-    icon: Flag,
-    href:""
+    title: "Trading Analysis Syndicate",
+    description: "A visualization project focused on Trading and Predicting stock prices.",
+    icon: Graph,
+    href:"https://github.com/pranavswaroop08/Trading-Analysis-Syndicate"
   },
 ]
 
