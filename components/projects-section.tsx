@@ -13,7 +13,7 @@ const featuredProjects = [
   description: "Built an AI-powered venue intelligence platform that helps users discover, evaluate, and compare event venues through data-driven insights, recommendations, and analytics.",
   technologies: ["Next.js", "TypeScript", "AI", "Data Analytics", "Maps API"],
   metrics: ["Venue Discovery", "Smart Recommendations", "Data Insights"],
-  image: "/VenueIQ.png",
+  image: "public/VenueIQ.png",
   github: "https://github.com/pranavswaroop08/VenueIQ",
   gradient: "from-primary/20 to-accent/20",
 },
