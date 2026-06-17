@@ -2,7 +2,6 @@
 
 import { ExternalLink, Github, Dumbbell, MessageSquare, Flag, ArrowRight, TrendingUp } from "lucide-react"
 import { motion } from "framer-motion"
-import { ExternalLink, Github, Dumbbell, MessageSquare, Flag, ArrowRight } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
