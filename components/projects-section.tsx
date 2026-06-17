@@ -1,5 +1,6 @@
 "use client"
 
+import { ExternalLink, Github, Dumbbell, MessageSquare, Flag, ArrowRight, TrendingUp } from "lucide-react"
 import { motion } from "framer-motion"
 import { ExternalLink, Github, Dumbbell, MessageSquare, Flag, ArrowRight } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
@@ -53,7 +54,7 @@ const additionalProjects = [
   {
     title: "Trading Analysis Syndicate",
     description: "A visualization project focused on Trading and Predicting stock prices.",
-    icon: Graph,
+    icon: TrendingUp,
     href:"https://github.com/pranavswaroop08/Trading-Analysis-Syndicate"
   },
 ]
