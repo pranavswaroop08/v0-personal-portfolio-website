@@ -10,13 +10,45 @@ import Link from "next/link"
 
 export function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  })
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { id, value } = e.target
+    setFormData((prev) => ({
+      ...prev,
+      [id]: value,
+    }))
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500))
-    setIsSubmitting(false)
+    
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
+      
+      if (response.ok) {
+        alert("Message sent successfully!")
+        setFormData({ name: "", email: "", subject: "", message: "" })
+      } else {
+        alert("Failed to send message. Please try again.")
+      }
+    } catch (error) {
+      alert("Error sending message. Please try again.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -61,6 +93,8 @@ export function ContactSection() {
                     id="name"
                     placeholder="Your name"
                     className="bg-secondary/50 border-border/50"
+                    value={formData.name}
+                    onChange={handleChange}
                     required
                   />
                 </div>
@@ -73,6 +107,8 @@ export function ContactSection() {
                     type="email"
                     placeholder="yourname@example.com"
                     className="bg-secondary/50 border-border/50"
+                    value={formData.email}
+                    onChange={handleChange}
                     required
                   />
                 </div>
@@ -85,6 +121,8 @@ export function ContactSection() {
                   id="subject"
                   placeholder="What is this about?"
                   className="bg-secondary/50 border-border/50"
+                  value={formData.subject}
+                  onChange={handleChange}
                   required
                 />
               </div>
@@ -96,6 +134,8 @@ export function ContactSection() {
                   id="message"
                   placeholder="Your message..."
                   className="bg-secondary/50 border-border/50 min-h-[150px]"
+                  value={formData.message}
+                  onChange={handleChange}
                   required
                 />
               </div>
