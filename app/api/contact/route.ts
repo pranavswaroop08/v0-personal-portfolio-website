@@ -5,16 +5,27 @@ export async function POST(request: NextRequest) {
   try {
     const { name, email, subject, message } = await request.json()
 
+    console.log("[v0] Contact form submission received:", { name, email, subject })
+
     // Validate required fields
     if (!name || !email || !subject || !message) {
+      console.log("[v0] Missing required fields")
       return NextResponse.json(
         { error: "Missing required fields" },
         { status: 400 }
       )
     }
 
+    // Check if environment variables are set
+    if (!process.env.EMAIL_USER || !process.env.EMAIL_PASSWORD) {
+      console.error("[v0] Missing EMAIL_USER or EMAIL_PASSWORD env vars")
+      return NextResponse.json(
+        { error: "Email service not configured" },
+        { status: 500 }
+      )
+    }
+
     // Create transporter - using Gmail SMTP
-    // You'll need to set up environment variables: EMAIL_USER and EMAIL_PASSWORD
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -23,8 +34,10 @@ export async function POST(request: NextRequest) {
       },
     })
 
+    console.log("[v0] Attempting to send email from:", process.env.EMAIL_USER)
+
     // Send email to your inbox
-    await transporter.sendMail({
+    const result = await transporter.sendMail({
       from: email,
       to: process.env.EMAIL_USER,
       replyTo: email,
@@ -39,14 +52,16 @@ export async function POST(request: NextRequest) {
       `,
     })
 
+    console.log("[v0] Email sent successfully:", result.messageId)
+
     return NextResponse.json(
       { message: "Email sent successfully" },
       { status: 200 }
     )
   } catch (error) {
-    console.error("Contact form error:", error)
+    console.error("[v0] Contact form error:", error)
     return NextResponse.json(
-      { error: "Failed to send email" },
+      { error: "Failed to send email", details: error instanceof Error ? error.message : "Unknown error" },
       { status: 500 }
     )
   }
