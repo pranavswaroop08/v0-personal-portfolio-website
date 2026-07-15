@@ -1,0 +1,121 @@
+{
+  "featuredProjects": [
+    {
+      "title": "VenueIQ",
+      "description": "Built an AI-powered venue intelligence platform that helps users discover, evaluate, and compare event venues through data-driven insights, recommendations, and analytics.",
+      "technologies": ["Next.js", "TypeScript", "AI", "Data Analytics", "Maps API"],
+      "metrics": ["Venue Discovery", "Smart Recommendations", "Data Insights"],
+      "image": "/VenueIQ.png",
+      "github": "https://github.com/pranavswaroop08/VenueIQ",
+      "gradient": "from-primary/20 to-accent/20"
+    },
+    {
+      "title": "Pitline",
+      "description": "Built a telemetry-driven analytics platform that helps sim racers compare racing lines, identify performance bottlenecks, and improve lap consistency through data-driven insights.",
+      "technologies": ["TypeScript", "Analytics", "Sports Technology", "Data Visualization"],
+      "metrics": ["Telemetry Analysis", "Racing Line Comparison", "Performance Tracking"],
+      "image": "/pitline.png",
+      "github": "https://github.com/pranavswaroop08/pitline",
+      "gradient": "from-accent/20 to-primary/20"
+    },
+    {
+      "title": "Reddit Trend Intelligence Agent",
+      "description": "Developed an automated intelligence platform that monitors Reddit communities, extracts emerging discussions, and generates actionable insights using workflow automation and AI-powered analysis.",
+      "technologies": ["Python", "APIs", "Automation", "n8n", "AI Analysis"],
+      "metrics": ["Automated Monitoring", "Trend Extraction", "Workflow Automation"],
+      "image": "/reddit.png",
+      "github": "https://github.com/pranavswaroop08/reddit-trend-intelligence-agent",
+      "gradient": "from-primary/20 to-accent/20"
+    }
+  ],
+  "additionalProjects": [
+    {
+      "title": "Fitness Tracker",
+      "description": "A web-based fitness tracking application that helps users monitor workouts, track progress, and maintain performance metrics.",
+      "icon": "Dumbbell",
+      "href": "https://github.com/pranavswaroop08/Fitness-Tracker"
+    },
+    {
+      "title": "Chat Room With File Transfer",
+      "description": "A real-time communication platform supporting messaging and file transfer functionality.",
+      "icon": "MessageSquare",
+      "href": "https://github.com/pranavswaroop08/Chat-Room-With-File-Transfer"
+    },
+    {
+      "title": "Trading Analysis Syndicate",
+      "description": "A visualization project focused on Trading and Predicting stock prices.",
+      "icon": "TrendingUp",
+      "href": "https://github.com/pranavswaroop08/Trading-Analysis-Syndicate"
+    }
+  ],
+  "research": {
+    "title": "Secure Cloud-Based Proactive Phishing Detection Using Certificate Transparency Log Stream Mining and Heterogeneous AI Fusion",
+    "description": "Developing a proactive phishing detection framework that mines Certificate Transparency logs to identify suspicious domain registrations before phishing campaigns become active. The system combines certificate intelligence, domain-based indicators, and heterogeneous AI models to improve early-stage threat detection and reduce false positives.",
+    "areas": [
+      { "name": "Cybersecurity", "icon": "Shield" },
+      { "name": "Threat Intelligence", "icon": "AlertTriangle" },
+      { "name": "AI for Security", "icon": "Brain" },
+      { "name": "Certificate Transparency Analytics", "icon": "Lock" },
+      { "name": "Phishing Detection", "icon": "Search" }
+    ],
+    "goals": [
+      { "icon": "Shield", "title": "Early Detection", "description": "Detect suspicious domains before phishing campaigns launch" },
+      { "icon": "Target", "title": "Accuracy", "description": "Reduce false positives in automated threat detection" },
+      { "icon": "Brain", "title": "AI Integration", "description": "Explore AI-assisted threat intelligence pipelines" },
+      { "icon": "Lock", "title": "Proactive Defense", "description": "Improve proactive cybersecurity defenses" }
+    ],
+    "timeline": [
+      { "status": "complete", "label": "Literature Review" },
+      { "status": "in-progress", "label": "Threat Intelligence Study" },
+      { "status": "in-progress", "label": "Framework Design" },
+      { "status": "in-progress", "label": "Data Collection" },
+      { "status": "pending", "label": "Model Development" },
+      { "status": "pending", "label": "Evaluation" }
+    ],
+    "technologies": ["Python", "Machine Learning", "Threat Intelligence", "Certificate Transparency", "Cloud Analytics", "Cybersecurity"]
+  },
+  "experiences": [
+    {
+      "type": "work",
+      "title": "Intern",
+      "company": "Emertxe Information Technologies",
+      "duration": "4 Weeks",
+      "description": "Completed technical internship focused on software development practices, technical problem solving, and industry-oriented learning.",
+      "icon": "Briefcase"
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Google Gemini Student Ambassador",
+      "description": "Reached advanced stage of Google Gemini Student Ambassador selection process.",
+      "icon": "Award"
+    },
+    {
+      "title": "Multiple AI & Automation Projects",
+      "description": "Built multiple AI and automation projects demonstrating practical application of emerging technologies.",
+      "icon": "GraduationCap"
+    },
+    {
+      "title": "Active Contributor",
+      "description": "Active contributor to technical projects and research initiatives in AI and cybersecurity.",
+      "icon": "Award"
+    }
+  ],
+  "skills": [
+    {
+      "title": "Programming Languages",
+      "icon": "Code2",
+      "skills": ["Python", "Java", "C++", "SQL", "HTML"]
+    },
+    {
+      "title": "AI & Automation",
+      "icon": "Cpu",
+      "skills": ["LLM Applications", "Workflow Automation", "Prompt Engineering", "API Integration", "Data Analysis"]
+    },
+    {
+      "title": "Tools",
+      "icon": "Wrench",
+      "skills": ["Git", "GitHub", "n8n"]
+    }
+  ]
+}

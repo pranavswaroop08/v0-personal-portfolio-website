@@ -1,36 +1,8 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Briefcase, Award, GraduationCap } from "lucide-react"
-
-const experiences = [
-  {
-    type: "work",
-    title: "Intern",
-    company: "Emertxe Information Technologies",
-    duration: "4 Weeks",
-    description: "Completed technical internship focused on software development practices, technical problem solving, and industry-oriented learning.",
-    icon: Briefcase,
-  },
-]
-
-const achievements = [
-  {
-    title: "Google Gemini Student Ambassador",
-    description: "Reached advanced stage of Google Gemini Student Ambassador selection process.",
-    icon: Award,
-  },
-  {
-    title: "Multiple AI & Automation Projects",
-    description: "Built multiple AI and automation projects demonstrating practical application of emerging technologies.",
-    icon: GraduationCap,
-  },
-  {
-    title: "Active Contributor",
-    description: "Active contributor to technical projects and research initiatives in AI and cybersecurity.",
-    icon: Award,
-  },
-]
+import { motion } from "framer-motion";
+import { Briefcase, Award, GraduationCap } from "lucide-react";
+import { experiences, achievements } from "@/data/portfolio";
 
 export function ExperienceSection() {
   return (
@@ -70,28 +42,31 @@ export function ExperienceSection() {
               Work Experience
             </h3>
 
-            {experiences.map((exp, index) => (
-              <div
-                key={index}
-                className="relative pl-8 pb-8 border-l-2 border-border last:pb-0"
-              >
-                {/* Timeline Dot */}
-                <div className="absolute left-0 top-0 w-4 h-4 -translate-x-1/2 rounded-full bg-primary glow-sm" />
-                
-                <div className="p-6 rounded-xl glass glass-hover">
-                  <div className="flex flex-wrap items-start justify-between gap-4 mb-3">
-                    <div>
-                      <h4 className="font-semibold text-lg">{exp.title}</h4>
-                      <p className="text-primary">{exp.company}</p>
+            {experiences.map((exp, index) => {
+              const Icon = exp.icon;
+              return (
+                <div
+                  key={index}
+                  className="relative pl-8 pb-8 border-l-2 border-border last:pb-0"
+                >
+                  {/* Timeline Dot */}
+                  <div className="absolute left-0 top-0 w-4 h-4 -translate-x-1/2 rounded-full bg-primary glow-sm" />
+
+                  <div className="p-6 rounded-xl glass glass-hover">
+                    <div className="flex flex-wrap items-start justify-between gap-4 mb-3">
+                      <div>
+                        <h4 className="font-semibold text-lg">{exp.title}</h4>
+                        <p className="text-primary">{exp.company}</p>
+                      </div>
+                      <span className="text-sm text-muted-foreground px-3 py-1 rounded-full bg-secondary/50">
+                        {exp.duration}
+                      </span>
                     </div>
-                    <span className="text-sm text-muted-foreground px-3 py-1 rounded-full bg-secondary/50">
-                      {exp.duration}
-                    </span>
+                    <p className="text-muted-foreground">{exp.description}</p>
                   </div>
-                  <p className="text-muted-foreground">{exp.description}</p>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </motion.div>
 
           {/* Leadership & Recognition */}
@@ -108,26 +83,29 @@ export function ExperienceSection() {
             </h3>
 
             <div className="grid md:grid-cols-3 gap-4">
-              {achievements.map((achievement, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="p-5 rounded-xl glass glass-hover group"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <achievement.icon className="h-5 w-5 text-primary" />
-                  </div>
-                  <h4 className="font-medium mb-2">{achievement.title}</h4>
-                  <p className="text-sm text-muted-foreground">{achievement.description}</p>
-                </motion.div>
-              ))}
+              {achievements.map((achievement, index) => {
+                const Icon = achievement.icon;
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="p-5 rounded-xl glass glass-hover group"
+                  >
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <Icon className="h-5 w-5 text-primary" />
+                    </div>
+                    <h4 className="font-medium mb-2">{achievement.title}</h4>
+                    <p className="text-sm text-muted-foreground">{achievement.description}</p>
+                  </motion.div>
+                );
+              })}
             </div>
           </motion.div>
         </div>
       </div>
     </section>
-  )
+  );
 }

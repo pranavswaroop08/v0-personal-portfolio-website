@@ -1,62 +1,12 @@
-"use client"
+"use client";
 
-import { ExternalLink, Github, Dumbbell, MessageSquare, Flag, ArrowRight, TrendingUp } from "lucide-react"
-import { motion } from "framer-motion"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import Image from "next/image"
-import Link from "next/link"
-
-const featuredProjects = [
-  {
-  title: "VenueIQ",
-  description: "Built an AI-powered venue intelligence platform that helps users discover, evaluate, and compare event venues through data-driven insights, recommendations, and analytics.",
-  technologies: ["Next.js", "TypeScript", "AI", "Data Analytics", "Maps API"],
-  metrics: ["Venue Discovery", "Smart Recommendations", "Data Insights"],
-  image: "/VenueIQ.png",
-  github: "https://github.com/pranavswaroop08/VenueIQ",
-  gradient: "from-primary/20 to-accent/20",
-},
-  {
-    title: "Pitline",
-    description: "Built a telemetry-driven analytics platform that helps sim racers compare racing lines, identify performance bottlenecks, and improve lap consistency through data-driven insights.",
-    technologies: ["TypeScript", "Analytics", "Sports Technology", "Data Visualization"],
-    metrics: ["Telemetry Analysis", "Racing Line Comparison", "Performance Tracking"],
-    image: "/pitline.png",
-    github: "https://github.com/pranavswaroop08/pitline",
-    gradient: "from-accent/20 to-primary/20",
-  },
-  {
-    title: "Reddit Trend Intelligence Agent",
-    description: "Developed an automated intelligence platform that monitors Reddit communities, extracts emerging discussions, and generates actionable insights using workflow automation and AI-powered analysis.",
-    technologies: ["Python", "APIs", "Automation", "n8n", "AI Analysis"],
-    metrics: ["Automated Monitoring", "Trend Extraction", "Workflow Automation"],
-    image: "/reddit.png",
-    github: "https://github.com/pranavswaroop08/reddit-trend-intelligence-agent",
-    gradient: "from-primary/20 to-accent/20",
-  },
-]
-
-const additionalProjects = [
-  {
-    title: "Fitness Tracker",
-    description: "A web-based fitness tracking application that helps users monitor workouts, track progress, and maintain performance metrics.",
-    icon: Dumbbell,
-    href:"https://github.com/pranavswaroop08/Fitness-Tracker"
-  },
-  {
-    title: "Chat Room With File Transfer",
-    description: "A real-time communication platform supporting messaging and file transfer functionality.",
-    icon: MessageSquare,
-    href:"https://github.com/pranavswaroop08/Chat-Room-With-FIle-Transfer"
-  },
-  {
-    title: "Trading Analysis Syndicate",
-    description: "A visualization project focused on Trading and Predicting stock prices.",
-    icon: TrendingUp,
-    href:"https://github.com/pranavswaroop08/Trading-Analysis-Syndicate"
-  },
-]
+import { ExternalLink, Github, ArrowRight, TrendingUp } from "lucide-react";
+import { motion } from "framer-motion";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import Link from "next/link";
+import { featuredProjects, additionalProjects } from "@/data/portfolio";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -66,12 +16,12 @@ const containerVariants = {
       staggerChildren: 0.15,
     },
   },
-}
+};
 
 const itemVariants = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-}
+};
 
 export function ProjectsSection() {
   return (
@@ -182,25 +132,28 @@ export function ProjectsSection() {
           viewport={{ once: true }}
           className="grid md:grid-cols-3 gap-4 mb-16"
         >
-          {additionalProjects.map((project) => (
-            <motion.div
-              key={project.title}
-              variants={itemVariants}
-              className="group"
-            >
-              <div className="p-5 rounded-xl glass glass-hover hover:shadow-lg hover:shadow-primary/5 transition-all duration-300">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300">
-                    <project.icon className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="font-medium mb-1">{project.title}</h4>
-                    <p className="text-muted-foreground text-sm">{project.description}</p>
+          {additionalProjects.map((project) => {
+            const Icon = project.icon;
+            return (
+              <motion.div
+                key={project.title}
+                variants={itemVariants}
+                className="group"
+              >
+                <div className="p-5 rounded-xl glass glass-hover hover:shadow-lg hover:shadow-primary/5 transition-all duration-300">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300">
+                      <Icon className="h-5 w-5 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="font-medium mb-1">{project.title}</h4>
+                      <p className="text-muted-foreground text-sm">{project.description}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            );
+          })}
         </motion.div>
 
         {/* GitHub CTA Section */}
@@ -232,5 +185,5 @@ export function ProjectsSection() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

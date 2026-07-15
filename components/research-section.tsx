@@ -1,57 +1,16 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Shield, Brain, Lock, Search, AlertTriangle, Target, CheckCircle2, Clock, Loader2 } from "lucide-react"
-import { Badge } from "@/components/ui/badge"
-
-const researchAreas = [
-  { name: "Cybersecurity", icon: Shield },
-  { name: "Threat Intelligence", icon: AlertTriangle },
-  { name: "AI for Security", icon: Brain },
-  { name: "Certificate Transparency Analytics", icon: Lock },
-  { name: "Phishing Detection", icon: Search },
-]
-
-const researchGoals = [
-  {
-    icon: Shield,
-    title: "Early Detection",
-    description: "Detect suspicious domains before phishing campaigns launch",
-  },
-  {
-    icon: Target,
-    title: "Accuracy",
-    description: "Reduce false positives in automated threat detection",
-  },
-  {
-    icon: Brain,
-    title: "AI Integration",
-    description: "Explore AI-assisted threat intelligence pipelines",
-  },
-  {
-    icon: Lock,
-    title: "Proactive Defense",
-    description: "Improve proactive cybersecurity defenses",
-  },
-]
-
-const timeline = [
-  { status: "complete", label: "Literature Review" },
-  { status: "in-progress", label: "Threat Intelligence Study" },
-  { status: "in-progress", label: "Framework Design" },
-  { status: "in-progress", label: "Data Collection" },
-  { status: "pending", label: "Model Development" },
-  { status: "pending", label: "Evaluation" },
-]
-
-const technologies = [
-  "Python",
-  "Machine Learning",
-  "Threat Intelligence",
-  "Certificate Transparency",
-  "Cloud Analytics",
-  "Cybersecurity",
-]
+import { motion } from "framer-motion";
+import { Shield, Brain, Lock, Search, AlertTriangle, Target, CheckCircle2, Clock, Loader2 } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import {
+  researchAreas,
+  researchGoals,
+  researchTimeline,
+  researchTechnologies,
+  researchTitle,
+  researchDescription,
+} from "@/data/portfolio";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -61,12 +20,12 @@ const containerVariants = {
       staggerChildren: 0.1,
     },
   },
-}
+};
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 },
-}
+};
 
 export function ResearchSection() {
   return (
@@ -115,29 +74,29 @@ export function ResearchSection() {
 
               {/* Title */}
               <h3 className="text-xl md:text-2xl font-semibold mb-6 leading-snug">
-                Secure Cloud-Based Proactive Phishing Detection Using Certificate Transparency Log Stream Mining and Heterogeneous AI Fusion
+                {researchTitle}
               </h3>
 
               {/* Research Areas */}
               <div className="flex flex-wrap gap-3 mb-8">
-                {researchAreas.map((area) => (
-                  <div
-                    key={area.name}
-                    className="flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 hover:bg-secondary/70 transition-colors"
-                  >
-                    <area.icon className="h-4 w-4 text-primary" />
-                    <span className="text-sm">{area.name}</span>
-                  </div>
-                ))}
+                {researchAreas.map((area) => {
+                  const Icon = area.icon;
+                  return (
+                    <div
+                      key={area.name}
+                      className="flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 hover:bg-secondary/70 transition-colors"
+                    >
+                      <Icon className="h-4 w-4 text-primary" />
+                      <span className="text-sm">{area.name}</span>
+                    </div>
+                  );
+                })}
               </div>
 
               {/* Description */}
               <div className="prose prose-invert max-w-none">
                 <p className="text-muted-foreground leading-relaxed">
-                  Developing a proactive phishing detection framework that mines Certificate Transparency
-                  logs to identify suspicious domain registrations before phishing campaigns become active.
-                  The system combines certificate intelligence, domain-based indicators, and heterogeneous
-                  AI models to improve early-stage threat detection and reduce false positives.
+                  {researchDescription}
                 </p>
               </div>
 
@@ -196,21 +155,24 @@ export function ResearchSection() {
             viewport={{ once: true }}
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto"
           >
-            {researchGoals.map((goal) => (
-              <motion.div
-                key={goal.title}
-                variants={itemVariants}
-                className="group"
-              >
-                <div className="p-6 rounded-xl glass glass-hover h-full hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <goal.icon className="h-6 w-6 text-primary" />
+            {researchGoals.map((goal) => {
+              const Icon = goal.icon;
+              return (
+                <motion.div
+                  key={goal.title}
+                  variants={itemVariants}
+                  className="group"
+                >
+                  <div className="p-6 rounded-xl glass glass-hover h-full hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                      <Icon className="h-6 w-6 text-primary" />
+                    </div>
+                    <h4 className="font-semibold mb-2">{goal.title}</h4>
+                    <p className="text-sm text-muted-foreground">{goal.description}</p>
                   </div>
-                  <h4 className="font-semibold mb-2">{goal.title}</h4>
-                  <p className="text-sm text-muted-foreground">{goal.description}</p>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              );
+            })}
           </motion.div>
         </motion.div>
 
@@ -226,7 +188,7 @@ export function ResearchSection() {
           </h3>
           <div className="p-8 rounded-2xl glass">
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {timeline.map((item, index) => (
+              {researchTimeline.map((item, index) => (
                 <motion.div
                   key={item.label}
                   initial={{ opacity: 0, scale: 0.9 }}
@@ -268,7 +230,7 @@ export function ResearchSection() {
             Technologies <span className="text-gradient">Used</span>
           </h3>
           <div className="flex flex-wrap justify-center gap-3">
-            {technologies.map((tech, index) => (
+            {researchTechnologies.map((tech, index) => (
               <motion.div
                 key={tech}
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -288,5 +250,5 @@ export function ResearchSection() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
