@@ -79,7 +79,7 @@
   ],
   "research": {
     "title": "Secure Cloud-Based Proactive Phishing Detection Using Certificate Transparency Log Stream Mining and Heterogeneous AI Fusion",
-    "description": "Developing a proactive phishing detection framework that mines Certificate Transparency logs to identify suspicious domain registrations before phishing campaigns become active. The system combines certificate intelligence, domain-based indicators, and heterogeneous AI models to improve early-stage threat detection and reduce false positives.",
+    "description": "Developing a proactive phishing detection framework that mines Certificate Transparency logs to identify suspicious domain registrations before phishing campaigns become active. The system combines certificate intelligence, domain-based indicators, and heterogeneous AI models to improve early-stage threat detection and reduce false positives. The system is built and working; the paper is being prepared for IEEE/ACM submission.",
     "areas": [
       {
         "name": "Cybersecurity",
@@ -130,23 +130,23 @@
         "label": "Literature Review"
       },
       {
-        "status": "in-progress",
+        "status": "complete",
         "label": "Threat Intelligence Study"
       },
       {
-        "status": "in-progress",
+        "status": "complete",
         "label": "Framework Design"
       },
       {
-        "status": "in-progress",
+        "status": "complete",
         "label": "Data Collection"
       },
       {
-        "status": "pending",
+        "status": "complete",
         "label": "Model Development"
       },
       {
-        "status": "pending",
+        "status": "in-progress",
         "label": "Evaluation"
       }
     ],
