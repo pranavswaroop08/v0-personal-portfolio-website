@@ -2,18 +2,21 @@
   "featuredProjects": [
     {
       "title": "VenueIQ",
-      "description": "Built an AI-powered venue intelligence platform that helps users discover, evaluate, and compare event venues through data-driven insights, recommendations, and analytics.",
+      "description": "Built an AI-powered autonomous crisis-management agent for stadium and live-event operations. Combines Gemini reasoning with Elasticsearch (via Elastic MCP) and human-in-the-loop dispatch to coordinate incident response in real time. Developed for the Google Cloud Rapid Agent Hackathon, with a Next.js/TypeScript application and a live Streamlit demo.",
       "technologies": [
         "Next.js",
         "TypeScript",
-        "AI",
-        "Data Analytics",
-        "Maps API"
+        "Gemini AI",
+        "Elasticsearch",
+        "MCP",
+        "Human-in-the-Loop",
+        "Streamlit"
       ],
       "metrics": [
-        "Venue Discovery",
-        "Smart Recommendations",
-        "Data Insights"
+        "Autonomous Dispatch",
+        "Crisis Management",
+        "Human-in-the-Loop",
+        "Live Event Ops"
       ],
       "image": "/VenueIQ.png",
       "github": "https://github.com/pranavswaroop08/VenueIQ",
@@ -21,16 +24,16 @@
     },
     {
       "title": "Pitline",
-      "description": "Built a telemetry-driven analytics platform that helps sim racers compare racing lines, identify performance bottlenecks, and improve lap consistency through data-driven insights.",
+      "description": "A telemetry analytics tool for sim racers that ingests lap data and surfaces performance insights to help drivers improve consistency and find time on track. Built with TypeScript.",
       "technologies": [
         "TypeScript",
-        "Analytics",
-        "Sports Technology",
+        "Telemetry",
+        "Data Analytics",
         "Data Visualization"
       ],
       "metrics": [
         "Telemetry Analysis",
-        "Racing Line Comparison",
+        "Lap Insights",
         "Performance Tracking"
       ],
       "image": "/pitline.png",
@@ -39,12 +42,12 @@
     },
     {
       "title": "Reddit Trend Intelligence Agent",
-      "description": "Developed an automated intelligence platform that monitors Reddit communities, extracts emerging discussions, and generates actionable insights using workflow automation and AI-powered analysis.",
+      "description": "An automated agent that monitors Reddit communities, extracts emerging discussions, and produces AI-driven trend insights. Built with Python and n8n workflow automation for hands-off, scheduled intelligence gathering.",
       "technologies": [
         "Python",
+        "n8n",
         "APIs",
         "Automation",
-        "n8n",
         "AI Analysis"
       ],
       "metrics": [
