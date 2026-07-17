@@ -23,22 +23,25 @@
       "gradient": "from-primary/20 to-accent/20"
     },
     {
-      "title": "Pitline",
-      "description": "A telemetry analytics tool for sim racers that ingests lap data and surfaces performance insights to help drivers improve consistency and find time on track. Built with TypeScript.",
+      "title": "Artha — Quant Platform",
+      "description": "An institutional-grade forecasting AI for the NSE/BSE markets that delivers probabilistic, explainable predictions. Phase 2 vertical slice is complete with 105 tests passing and active CI; the full design and a 150-issue backlog are done and pushed.",
       "technologies": [
-        "TypeScript",
-        "Telemetry",
-        "Data Analytics",
-        "Data Visualization"
+        "Python",
+        "Machine Learning",
+        "Probabilistic Modeling",
+        "Forecasting",
+        "CI/CD",
+        "Explainable AI"
       ],
       "metrics": [
-        "Telemetry Analysis",
-        "Lap Insights",
-        "Performance Tracking"
+        "105 Tests Passing",
+        "CI Active",
+        "150-Issue Backlog",
+        "Explainable AI"
       ],
-      "image": "/pitline.png",
-      "github": "https://github.com/pranavswaroop08/pitline",
-      "gradient": "from-accent/20 to-primary/20"
+      "image": "/profile.jpg",
+      "github": "https://github.com/pranavswaroop08/artha",
+      "gradient": "from-primary/20 to-accent/20"
     },
     {
       "title": "Reddit Trend Intelligence Agent",
