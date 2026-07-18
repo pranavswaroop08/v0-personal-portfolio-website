@@ -81,6 +81,30 @@
       "description": "A visualization project focused on Trading and Predicting stock prices.",
       "icon": "TrendingUp",
       "href": "https://github.com/pranavswaroop08/Trading-Analysis-Syndicate"
+    },
+    {
+      "title": "NBA Roster Optimizer",
+      "description": "A sports-analytics and quantitative-finance crossover project that optimizes NBA roster construction using data-driven modeling.",
+      "icon": "TrendingUp",
+      "href": "#"
+    },
+    {
+      "title": "AI NBA General Manager",
+      "description": "A conceptual AI agent that acts as an NBA general manager, blending sports analytics with autonomous decision-making.",
+      "icon": "Brain",
+      "href": "#"
+    },
+    {
+      "title": "Videolify Clone",
+      "description": "A video and AI tool inspired by Videolify, with wireframes, an overview, and a feature breakdown drafted in early concept form.",
+      "icon": "Code2",
+      "href": "#"
+    },
+    {
+      "title": "DSA Quest",
+      "description": "A DSA-learning product idea with a drafted PRD, database design, and user-flow; aimed at gamified data-structures and algorithms practice.",
+      "icon": "Target",
+      "href": "#"
     }
   ],
   "research": {
